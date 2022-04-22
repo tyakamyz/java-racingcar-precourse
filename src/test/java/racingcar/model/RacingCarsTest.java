@@ -6,15 +6,15 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class CarsTest {
+class RacingCarsTest {
 
     @Test
     void registerCars() {
-        Cars cars = new Cars();
+        RacingCars cars = new RacingCars();
         cars.registerCars(Arrays.asList("pobi","woni","jun"));
 
         assertThat(cars)
                 .usingRecursiveComparison()
-                .isEqualTo(new Cars(Arrays.asList(new Car("pobi"), new Car("woni"), new Car("jun"))));
+                .isEqualTo(new RacingCars(Arrays.asList(new Car("pobi"), new Car("woni"), new Car("jun"))));
     }
 }

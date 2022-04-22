@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
-    private final List<Car> cars;
+    List<Car> cars;
 
     public Cars() {
         this.cars = new ArrayList<>();
@@ -14,29 +14,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    private void addCar(Car car){
+    void addCar(Car car){
         this.cars.add(car);
-    }
-
-    public void registerCars(List<String> carNames){
-        for (String name : carNames) {
-            addCar(new Car(name));
-        }
-    }
-
-    public Cars findWinnerCars() {
-        Cars winnerCars = new Cars();
-
-        for(Car car : this.cars){
-            compareMaxScore(winnerCars, car);
-        }
-
-        return winnerCars;
-    }
-
-    private void compareMaxScore(Cars winnerCars, Car car) {
-        if(car.isWinner()){
-            winnerCars.addCar(car);
-        }
     }
 }

@@ -12,6 +12,7 @@ public class ResultView {
 
     public final static String ERROR_NAME_BLANK = "[ERROR] 이름을 입력해주세요.";
     public final static String ERROR_NAME_MAX_SIZE = String.format("[ERROR] 자동차 이름은 %d자 이하만 가능합니다.", Name.MAX_SIZE);
+    public final static String ERROR_NOT_INTEGER = "[ERROR] 값이 올바르지 않습니다. 0보다 큰 숫자 값을 입력 해주세요";
 
     public static void getInputCarsNameMessage(){
         System.out.println(INPUT_CARS_NAME);

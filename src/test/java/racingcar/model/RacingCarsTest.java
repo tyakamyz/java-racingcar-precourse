@@ -3,6 +3,7 @@ package racingcar.model;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,5 +17,15 @@ class RacingCarsTest {
         assertThat(cars)
                 .usingRecursiveComparison()
                 .isEqualTo(new RacingCars(Arrays.asList(new Car("pobi"), new Car("woni"), new Car("jun"))));
+    }
+
+    @Test
+    void findWinnerCars() {
+        MaxScore.setMaxScore(3);
+
+        RacingCars cars = new RacingCars(Arrays.asList(new Car("pobi", 1), new Car("woni", 3), new Car("jun", 1)));
+        cars.findWinnerCars();
+
+        assertThat(cars.getWinnerCar()).usingRecursiveComparison().isEqualTo(new Cars(Collections.singletonList(new Car("woni", 3))));
     }
 }

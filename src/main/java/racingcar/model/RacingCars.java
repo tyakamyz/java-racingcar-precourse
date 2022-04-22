@@ -3,7 +3,7 @@ package racingcar.model;
 import java.util.List;
 
 public class RacingCars extends Cars{
-    Cars winnerCars;
+    private Cars winnerCars;
 
     public RacingCars(){
         super();
@@ -31,5 +31,9 @@ public class RacingCars extends Cars{
         if(car.isWinner()){
             winnerCars.addCar(car);
         }
+    }
+
+    public Cars getWinnerCar() {
+        return this.winnerCars;
     }
 }

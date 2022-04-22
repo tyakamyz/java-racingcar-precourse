@@ -11,6 +11,6 @@ class ScoreTest {
         Score score = new Score(3);
         score.maxScoreCompare();
 
-        assertThat(Score.getMaxScore()).isEqualTo(3);
+        assertThat(MaxScore.getMaxScore()).isEqualTo(3);
     }
 }

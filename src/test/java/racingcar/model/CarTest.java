@@ -1,5 +1,5 @@
 package racingcar.model;
 
-public class Car {
+class CarTest {
 
 }

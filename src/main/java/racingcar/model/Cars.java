@@ -23,4 +23,20 @@ public class Cars {
             addCar(new Car(name));
         }
     }
+
+    public Cars findWinnerCars() {
+        Cars winnerCars = new Cars();
+
+        for(Car car : this.cars){
+            compareMaxScore(winnerCars, car);
+        }
+
+        return winnerCars;
+    }
+
+    private void compareMaxScore(Cars winnerCars, Car car) {
+        if(car.isWinner()){
+            winnerCars.addCar(car);
+        }
+    }
 }

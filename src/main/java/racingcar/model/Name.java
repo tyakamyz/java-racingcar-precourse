@@ -10,7 +10,7 @@ public class Name {
     public Name(String name) {
         name = StringUtil.removeSpace(name);
         validateCheckName(name);
-        
+
         this.name = name;
     }
 
@@ -22,5 +22,9 @@ public class Name {
         if(name.length() > MAX_SIZE){
             throw new IllegalArgumentException("[ERROR] 자동차 이름은 5자 이하만 가능합니다.");
         }
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

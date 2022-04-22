@@ -20,4 +20,8 @@ public class Score {
             MaxScore.setMaxScore(this.score);
         }
     }
+
+    public boolean isMaxScore() {
+        return MaxScore.getMaxScore() == this.score;
+    }
 }

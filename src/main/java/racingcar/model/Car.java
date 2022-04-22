@@ -22,4 +22,12 @@ public class Car {
             this.score.maxScoreCompare();
         }
     }
+
+    public boolean isWinner() {
+        return this.score.isMaxScore();
+    }
+
+    public String getName() {
+        return this.name.getName();
+    }
 }

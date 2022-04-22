@@ -9,6 +9,7 @@ public class ResultView {
     public final static String RESULT_TITLE = "실행 결과";
     public final static String RESULT_MOVE_MARK = "%s : %s";
     public final static String RESULT_FINAL_WINNER = "최종 우승자: %s";
+    public final static String MARK = "-";
 
     public final static String ERROR_NAME_BLANK = "[ERROR] 이름을 입력해주세요.";
     public final static String ERROR_NAME_MAX_SIZE = String.format("[ERROR] 자동차 이름은 %d자 이하만 가능합니다.", Name.MAX_SIZE);
@@ -22,7 +23,7 @@ public class ResultView {
         System.out.println(INPUT_TRY_NUMBER);
     }
 
-    public static void getResultTitleMessage(String name, String mark){
+    public static void getResultTitleMessage(){
         System.out.println(RESULT_TITLE);
     }
 

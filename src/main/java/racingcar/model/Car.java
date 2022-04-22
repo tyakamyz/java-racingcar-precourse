@@ -1,6 +1,8 @@
 package racingcar.model;
 
 public class Car {
+    public static final int MIN_MOVE_NUMBER = 0;
+    public static final int MAX_MOVE_NUMBER = 9;
     private final int STANDARD_NUMBER = 4;
 
     private final Name name;
@@ -29,5 +31,9 @@ public class Car {
 
     public String getName() {
         return this.name.getName();
+    }
+
+    public String getMoveMark() {
+        return this.score.getMark();
     }
 }

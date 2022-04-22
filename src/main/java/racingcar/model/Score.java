@@ -1,5 +1,7 @@
 package racingcar.model;
 
+import racingcar.view.ResultView;
+
 public class Score {
     private int score;
 
@@ -23,5 +25,15 @@ public class Score {
 
     public boolean isMaxScore() {
         return MaxScore.getMaxScore() == this.score;
+    }
+
+    public String getMark() {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < this.score; i++) {
+            sb.append(ResultView.MARK);
+        }
+
+        return sb.toString();
     }
 }

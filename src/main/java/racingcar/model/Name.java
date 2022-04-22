@@ -8,7 +8,9 @@ public class Name {
     private final String name;
 
     public Name(String name) {
+        name = StringUtil.removeSpace(name);
         validateCheckName(name);
+        
         this.name = name;
     }
 

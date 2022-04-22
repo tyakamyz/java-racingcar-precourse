@@ -34,4 +34,8 @@ public class ResultView {
     public static void getResultFinalWinnerMessage(String winner){
         System.out.println(String.format(RESULT_FINAL_WINNER, winner));
     }
+
+    public static void getPrintMessage(String message) {
+        System.out.println(message);
+    }
 }

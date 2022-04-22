@@ -18,6 +18,6 @@ public class InputView {
             return tryNumber;
         }
 
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException(ResultView.ERROR_NOT_INTEGER);
     }
 }
